@@ -73,7 +73,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/@thomas.hogan36/sanity-plugin-singleton"
+    "url": "https://github.com/sanity-plugin-singleton"
   },
   "sideEffects": true
 }
