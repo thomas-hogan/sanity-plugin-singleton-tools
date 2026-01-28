@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-singleton-tools-new",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A plugin to create and manage singletons in your Sanity Studio",
   "keywords": [
     "sanity",
@@ -10,10 +10,9 @@
   "author": "Thomas Hogan <thomas.hogan@complex.com>",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "source": "./src/index.ts",
-      "require": "./dist/index.js",
       "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
       "default": "./dist/index.esm.js"
     },
     "./package.json": "./package.json"
@@ -24,9 +23,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "sanity.json",
-    "src",
-    "v2-incompatible.js"
+    "src"
   ],
   "scripts": {
     "build": "run-s clean && plugin-kit verify-package --silent && pkg-utils build --strict && pkg-utils --strict",
@@ -38,13 +35,12 @@
     "watch": "pkg-utils watch --strict"
   },
   "dependencies": {
-    "@sanity/icons": "^3.7.4",
-    "@sanity/incompatible-plugin": "^1.0.4"
+    "@sanity/icons": "^3.7.4"
   },
   "devDependencies": {
     "@sanity/pkg-utils": "^4.4.0",
     "@sanity/plugin-kit": "^3.1.10",
-    "@types/react": "^18.2.62",
+    "@types/react": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
     "@typescript-eslint/parser": "^7.1.1",
     "eslint": "^8.57.0",
@@ -56,24 +52,32 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "prettier-plugin-packagejson": "^2.4.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "react-is": "^19.0.0",
     "rimraf": "^5.0.5",
-    "sanity": "^3.30.1",
-    "styled-components": "^5.3.11",
+    "sanity": "^5.0.0",
+    "styled-components": "^6.1.15",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "react": "^18 || ^19",
-    "sanity": "^3 || ^4"
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^5"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
+  },
+  "sanityPlugin": {
+    "verifyPackage": {
+      "nodeEngine": false,
+      "sanityV2Json": false
+    }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/sanity-plugin-singleton-tools-new"
   },
-  "sideEffects": true
+  "sideEffects": true,
+  "browserslist": "extends @sanity/browserslist-config"
 }
