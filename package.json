@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-singleton-tools-new",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A plugin to create and manage singletons in your Sanity Studio",
   "keywords": [
     "sanity",
@@ -76,7 +76,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanity-plugin-singleton-tools-new"
+    "url": "https://github.com/thomas-hogan/sanity-plugin-singleton-tools"
   },
   "sideEffects": true,
   "browserslist": "extends @sanity/browserslist-config"
